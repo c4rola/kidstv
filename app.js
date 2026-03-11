@@ -7,7 +7,6 @@ function pesquisar() {
         section.innerHTML = '<p>Nada foi encontrado. Você precisa digitar uma palavra de busca.</p>'
         return
     }
-    //se o código chegar no return ele não realiza os comandos das linhas seguintes
 
     campoPesquisa = campoPesquisa.toLowerCase()
 
@@ -24,7 +23,6 @@ function pesquisar() {
         descricao = dado.descricao.toLowerCase()
         tags = dado.tags.toLowerCase()
 
-        //agora não é preciso mais usar dados.titulo.includes pois "titulo" já foi declarado como dado.titulo e o mesmo para "descricao"
 
         if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
             resultados += `
@@ -46,5 +44,6 @@ function pesquisar() {
 
     section.innerHTML = resultados
 }
+
 
 
